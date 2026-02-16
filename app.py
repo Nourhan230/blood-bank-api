@@ -535,7 +535,7 @@ if __name__ == '__main__':
     print("🩸 Blood Bank API Server Starting...")
 
     # Get port from environment variable (Railway uses PORT)
-    port = int(os.environ.get('PORT' , 5000))
+    port = int(os.environ.get('PORT' , 8080))
 
     print(f"📍 Running on port: {port}")
     print("📚 API Documentation: See API_DOCUMENTATION.md")
