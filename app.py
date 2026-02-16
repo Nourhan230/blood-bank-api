@@ -530,14 +530,20 @@ def internal_error(e):
 # ============================================
 
 if __name__ == '__main__':
+    import os
+
     print("🩸 Blood Bank API Server Starting...")
-    print("📍 Running on: http://localhost:5000")
+
+    # Get port from environment variable (Railway uses PORT)
+    port = int(os.environ.get('PORT' , 5000))
+
+    print(f"📍 Running on port: {port}")
     print("📚 API Documentation: See API_DOCUMENTATION.md")
-    print("🏥 Health Check: http://localhost:5000/api/health")
+    print("🏥 Health Check: http://localhost:{port}/api/health")
     print("\n✅ Ready to receive requests!\n")
 
     app.run(
-        host='0.0.0.0' ,  # Allow external connections (for mobile testing)
+        host='0.0.0.0' ,  # Allow external connections
         port=port ,
-        debug = False  # Remove in production
+        debug=False  # Production mode
     )
