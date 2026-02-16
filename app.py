@@ -539,7 +539,7 @@ if __name__ == '__main__':
 
     print(f"📍 Running on port: {port}")
     print("📚 API Documentation: See API_DOCUMENTATION.md")
-    print("🏥 Health Check: http://localhost:{port}/api/health")
+    print(f"🏥 Health Check: http://localhost:{port}/api/health")
     print("\n✅ Ready to receive requests!\n")
 
     app.run(
