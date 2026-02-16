@@ -1,0 +1,91 @@
+{
+  "model": "Blood Intelligence Engine",
+  "submodel": "Heatmap Analysis",
+  "output_type": "risk_heatmap",
+  "description": "Geographic risk analysis based on demand vs donor availability",
+  "schema": {
+    "area_id": "string",
+    "location": {
+      "latitude": "float",
+      "longitude": "float"
+    },
+    "demand_score": "float (0.0 - 1.0, normalized demand intensity)",
+    "donor_density": "float (donors per square km)",
+    "risk_level": "string (LOW, MEDIUM, HIGH, CRITICAL)"
+  },
+  "sample_data": [
+    {
+      "area_id": "AREA_001",
+      "location": {
+        "latitude": 30.0444,
+        "longitude": 31.2357
+      },
+      "demand_score": 0.85,
+      "donor_density": 12.5,
+      "risk_level": "MEDIUM"
+    },
+    {
+      "area_id": "AREA_002",
+      "location": {
+        "latitude": 30.0626,
+        "longitude": 31.2497
+      },
+      "demand_score": 0.72,
+      "donor_density": 18.3,
+      "risk_level": "LOW"
+    },
+    {
+      "area_id": "AREA_003",
+      "location": {
+        "latitude": 30.0131,
+        "longitude": 31.2089
+      },
+      "demand_score": 0.90,
+      "donor_density": 8.2,
+      "risk_level": "HIGH"
+    },
+    {
+      "area_id": "AREA_004",
+      "location": {
+        "latitude": 30.0876,
+        "longitude": 31.3260
+      },
+      "demand_score": 0.65,
+      "donor_density": 6.5,
+      "risk_level": "MEDIUM"
+    },
+    {
+      "area_id": "AREA_005",
+      "location": {
+        "latitude": 30.0300,
+        "longitude": 31.2200
+      },
+      "demand_score": 0.95,
+      "donor_density": 4.1,
+      "risk_level": "CRITICAL"
+    }
+  ],
+  "risk_calculation": {
+    "formula": "risk_level = f(demand_score, donor_density)",
+    "thresholds": {
+      "LOW": "demand_score < 0.5 OR donor_density > 15",
+      "MEDIUM": "0.5 <= demand_score < 0.75 AND donor_density 10-15",
+      "HIGH": "0.75 <= demand_score < 0.9 AND donor_density 5-10",
+      "CRITICAL": "demand_score >= 0.9 OR donor_density < 5"
+    }
+  },
+  "visualization_notes": {
+    "color_scheme": {
+      "LOW": "green",
+      "MEDIUM": "yellow",
+      "HIGH": "orange",
+      "CRITICAL": "red"
+    },
+    "map_layers": [
+      "Base map",
+      "Hospital locations (markers)",
+      "Donor distribution (dots)",
+      "Risk zones (colored polygons/heatmap gradient)"
+    ]
+  }
+}

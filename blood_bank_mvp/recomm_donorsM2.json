@@ -1,0 +1,72 @@
+{
+  "model": "Dynamic Matching Algorithm",
+  "output_type": "recommended_donors",
+  "description": "Matched donors for emergency requests ranked by matching score",
+  "schema": {
+    "request_id": "string",
+    "donors": [
+      {
+        "donor_id": "string",
+        "matching_score": "float (0.0 - 1.0)",
+        "distance_km": "float"
+      }
+    ]
+  },
+  "sample_data": [
+    {
+      "request_id": "REQ001",
+      "donors": [
+        {
+          "donor_id": "D002",
+          "matching_score": 0.95,
+          "distance_km": 1.2
+        },
+        {
+          "donor_id": "D001",
+          "matching_score": 0.92,
+          "distance_km": 1.8
+        },
+        {
+          "donor_id": "D003",
+          "matching_score": 0.88,
+          "distance_km": 2.5
+        }
+      ]
+    },
+    {
+      "request_id": "REQ002",
+      "donors": [
+        {
+          "donor_id": "D005",
+          "matching_score": 0.96,
+          "distance_km": 0.8
+        },
+        {
+          "donor_id": "D004",
+          "matching_score": 0.94,
+          "distance_km": 1.1
+        },
+        {
+          "donor_id": "D008",
+          "matching_score": 0.89,
+          "distance_km": 2.3
+        }
+      ]
+    },
+    {
+      "request_id": "REQ003",
+      "donors": [
+        {
+          "donor_id": "D006",
+          "matching_score": 0.93,
+          "distance_km": 0.5
+        },
+        {
+          "donor_id": "D010",
+          "matching_score": 0.90,
+          "distance_km": 1.0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "model": "Blood Intelligence Engine",
+  "submodel": "Waste Rate Analysis",
+  "output_type": "waste_rate",
+  "description": "Calculated waste rates by hospital and blood type",
+  "schema": {
+    "hospital_id": "string",
+    "blood_type": "string (A+, A-, B+, B-, AB+, AB-, O+, O-)",
+    "waste_rate": "float (0.0 - 1.0, percentage as decimal)"
+  },
+  "sample_data": [
+    {
+      "hospital_id": "H001",
+      "blood_type": "O+",
+      "waste_rate": 0.06
+    },
+    {
+      "hospital_id": "H001",
+      "blood_type": "A+",
+      "waste_rate": 0.057
+    },
+    {
+      "hospital_id": "H001",
+      "blood_type": "AB-",
+      "waste_rate": 0.50
+    },
+    {
+      "hospital_id": "H002",
+      "blood_type": "O-",
+      "waste_rate": 0.05
+    },
+    {
+      "hospital_id": "H002",
+      "blood_type": "B+",
+      "waste_rate": 0.08
+    },
+    {
+      "hospital_id": "H003",
+      "blood_type": "O+",
+      "waste_rate": 0.067
+    }
+  ],
+  "notes": {
+    "calculation": "waste_rate = units_expired / (units_collected)",
+    "interpretation": {
+      "low": "< 0.05 (5%)",
+      "acceptable": "0.05 - 0.10 (5-10%)",
+      "high": "0.10 - 0.20 (10-20%)",
+      "critical": "> 0.20 (20%)"
+    }
+  }
+}

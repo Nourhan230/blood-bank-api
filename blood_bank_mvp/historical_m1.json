@@ -1,0 +1,49 @@
+{
+  "model": "Predictive Demand Engine",
+  "input_type": "historical_usage",
+  "description": "Historical blood usage data by hospital",
+  "schema": {
+    "hospital_id": "string",
+    "blood_type": "string (A+, A-, B+, B-, AB+, AB-, O+, O-)",
+    "date_of_usage": "date (YYYY-MM-DD)",
+    "units_used": "integer"
+  },
+  "sample_data": [
+    {
+      "hospital_id": "H001",
+      "blood_type": "O+",
+      "date_of_usage": "2024-01-15",
+      "units_used": 12
+    },
+    {
+      "hospital_id": "H001",
+      "blood_type": "A+",
+      "date_of_usage": "2024-01-15",
+      "units_used": 8
+    },
+    {
+      "hospital_id": "H001",
+      "blood_type": "O+",
+      "date_of_usage": "2024-01-16",
+      "units_used": 15
+    },
+    {
+      "hospital_id": "H002",
+      "blood_type": "B+",
+      "date_of_usage": "2024-01-15",
+      "units_used": 6
+    },
+    {
+      "hospital_id": "H002",
+      "blood_type": "O-",
+      "date_of_usage": "2024-01-15",
+      "units_used": 4
+    },
+    {
+      "hospital_id": "H003",
+      "blood_type": "AB+",
+      "date_of_usage": "2024-01-16",
+      "units_used": 3
+    }
+  ]
+}

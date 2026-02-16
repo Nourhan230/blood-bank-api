@@ -1,0 +1,64 @@
+{
+  "model": "Blood Intelligence Engine",
+  "submodel": "Waste Rate Analysis",
+  "input_type": "inventory_movements",
+  "description": "Blood inventory movements tracking collection, usage, and expiration",
+  "schema": {
+    "hospital_id": "string",
+    "blood_type": "string (A+, A-, B+, B-, AB+, AB-, O+, O-)",
+    "units_collected": "integer",
+    "units_used": "integer",
+    "units_expired": "integer",
+    "date": "date (YYYY-MM-DD)"
+  },
+  "sample_data": [
+    {
+      "hospital_id": "H001",
+      "blood_type": "O+",
+      "units_collected": 50,
+      "units_used": 45,
+      "units_expired": 3,
+      "date": "2024-01-15"
+    },
+    {
+      "hospital_id": "H001",
+      "blood_type": "A+",
+      "units_collected": 35,
+      "units_used": 32,
+      "units_expired": 2,
+      "date": "2024-01-15"
+    },
+    {
+      "hospital_id": "H001",
+      "blood_type": "AB-",
+      "units_collected": 10,
+      "units_used": 4,
+      "units_expired": 5,
+      "date": "2024-01-15"
+    },
+    {
+      "hospital_id": "H002",
+      "blood_type": "O-",
+      "units_collected": 20,
+      "units_used": 18,
+      "units_expired": 1,
+      "date": "2024-01-15"
+    },
+    {
+      "hospital_id": "H002",
+      "blood_type": "B+",
+      "units_collected": 25,
+      "units_used": 22,
+      "units_expired": 2,
+      "date": "2024-01-15"
+    },
+    {
+      "hospital_id": "H003",
+      "blood_type": "O+",
+      "units_collected": 60,
+      "units_used": 55,
+      "units_expired": 4,
+      "date": "2024-01-16"
+    }
+  ]
+}

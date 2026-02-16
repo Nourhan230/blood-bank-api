@@ -1,0 +1,77 @@
+{
+  "model": "Predictive Demand Engine",
+  "input_type": "current_inventory",
+  "description": "Current blood inventory levels by hospital",
+  "schema": {
+    "hospital_id": "string",
+    "blood_type": "string (A+, A-, B+, B-, AB+, AB-, O+, O-)",
+    "current_units": "integer"
+  },
+  "sample_data": [
+    {
+      "hospital_id": "H001",
+      "blood_type": "O+",
+      "current_units": 45
+    },
+    {
+      "hospital_id": "H001",
+      "blood_type": "A+",
+      "current_units": 32
+    },
+    {
+      "hospital_id": "H001",
+      "blood_type": "B+",
+      "current_units": 28
+    },
+    {
+      "hospital_id": "H001",
+      "blood_type": "AB+",
+      "current_units": 15
+    },
+    {
+      "hospital_id": "H001",
+      "blood_type": "O-",
+      "current_units": 8
+    },
+    {
+      "hospital_id": "H001",
+      "blood_type": "A-",
+      "current_units": 12
+    },
+    {
+      "hospital_id": "H001",
+      "blood_type": "B-",
+      "current_units": 6
+    },
+    {
+      "hospital_id": "H001",
+      "blood_type": "AB-",
+      "current_units": 4
+    },
+    {
+      "hospital_id": "H002",
+      "blood_type": "O+",
+      "current_units": 38
+    },
+    {
+      "hospital_id": "H002",
+      "blood_type": "A+",
+      "current_units": 25
+    },
+    {
+      "hospital_id": "H002",
+      "blood_type": "O-",
+      "current_units": 5
+    },
+    {
+      "hospital_id": "H003",
+      "blood_type": "O+",
+      "current_units": 52
+    },
+    {
+      "hospital_id": "H003",
+      "blood_type": "AB+",
+      "current_units": 18
+    }
+  ]
+}

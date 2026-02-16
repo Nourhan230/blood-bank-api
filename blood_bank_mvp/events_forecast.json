@@ -1,0 +1,62 @@
+{
+  "model": "Blood Intelligence Engine",
+  "submodel": "Demand Insights & Forecast",
+  "input_type": "events",
+  "description": "Events that impact blood demand with their impact levels",
+  "schema": {
+    "event_name": "string",
+    "date": "date (YYYY-MM-DD)",
+    "impact_level": "float (multiplier: 1.0 = normal, >1.0 = increased demand, <1.0 = decreased demand)"
+  },
+  "sample_data": [
+    {
+      "event_name": "National Holiday (Eid al-Fitr)",
+      "date": "2024-04-10",
+      "impact_level": 0.7
+    },
+    {
+      "event_name": "Major Traffic Accident",
+      "date": "2024-02-20",
+      "impact_level": 2.5
+    },
+    {
+      "event_name": "Mass Gathering (Football Match)",
+      "date": "2024-03-15",
+      "impact_level": 1.8
+    },
+    {
+      "event_name": "Blood Donation Campaign",
+      "date": "2024-02-25",
+      "impact_level": 0.6
+    },
+    {
+      "event_name": "Extreme Weather Event",
+      "date": "2024-03-05",
+      "impact_level": 1.5
+    },
+    {
+      "event_name": "Public Health Emergency",
+      "date": "2024-02-28",
+      "impact_level": 3.0
+    },
+    {
+      "event_name": "Weekend (Friday)",
+      "date": "2024-02-16",
+      "impact_level": 0.8
+    },
+    {
+      "event_name": "Major Surgery Scheduled",
+      "date": "2024-03-10",
+      "impact_level": 1.4
+    }
+  ],
+  "impact_level_guide": {
+    "very_low": "0.5 - 0.7 (holidays, low activity days)",
+    "low": "0.7 - 0.9 (weekends, donation campaigns)",
+    "normal": "1.0 (regular day)",
+    "moderate": "1.1 - 1.5 (scheduled surgeries, minor events)",
+    "high": "1.5 - 2.0 (mass gatherings, weather events)",
+    "very_high": "2.0 - 3.0 (major accidents, emergencies)",
+    "critical": "> 3.0 (disasters, mass casualties)"
+  }
+}
